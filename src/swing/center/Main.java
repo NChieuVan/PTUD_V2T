@@ -19,6 +19,7 @@ import swing.form.Form_XemHoaDon;
 import swing.form.MainForm;
 import swing.icon.GoogleMaterialDesignIcons;
 import swing.icon.IconFontSwing;
+import swing.login.Login;
 
 public class Main extends javax.swing.JFrame {
 
@@ -45,15 +46,17 @@ public class Main extends javax.swing.JFrame {
                 System.out.println("Menu Index : " + menuIndex + " SubMenu Index " + subMenuIndex);
                 if (menuIndex == 0) {
                     if (subMenuIndex == 0) {
-                        main.showForm(new Form_Home());
-                    } 
-                
+                        Login login = new Login();
+                        login.setVisible(true);
+                        Main.this.dispose();
+                    }
+
                 }
-                if(menuIndex == 1){
-                    if(subMenuIndex == 0){
+                if (menuIndex == 1) {
+                    if (subMenuIndex == 0) {
                         main.showForm(new Form_LapHoaDon());
                     }
-                    if(subMenuIndex == 1){
+                    if (subMenuIndex == 1) {
                         main.showForm(new Form_XemHoaDon());
                     }
                 }
@@ -74,10 +77,10 @@ public class Main extends javax.swing.JFrame {
         bg.add(menu, "w 210!, spany 2");    // Span Y 2cell
         bg.add(header, "h 40!, wrap");
         bg.add(main, "w 100%, h 100%");
-        
+
         /**
          * with kích cỡ thu menu và giãn menu
-         */ 
+         */
         TimingTarget target = new TimingTargetAdapter() {
             @Override
             public void timingEvent(float fraction) {
@@ -130,17 +133,18 @@ public class Main extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
+        bg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         bg.setOpaque(true);
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
         bg.setLayout(bgLayout);
         bgLayout.setHorizontalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1250, Short.MAX_VALUE)
+            .addGap(0, 1248, Short.MAX_VALUE)
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGap(0, 778, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

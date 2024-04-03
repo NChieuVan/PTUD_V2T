@@ -67,6 +67,8 @@ public class Menu extends javax.swing.JPanel {
 //        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/13.png")), "Our Centres"));
 //        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/14.png")), "Gallery"));
     }
+    
+
 
     private void addMenu(ModelMenu menu) {
         panel.add(new MenuItem(menu, getEventMenu(), event, panel.getComponentCount()), "h 40!");
@@ -114,6 +116,7 @@ public class Menu extends javax.swing.JPanel {
         sp.setBorder(null);
         sp.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
+        panel.setBackground(new java.awt.Color(0, 204, 255));
         panel.setOpaque(false);
 
         javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
@@ -144,16 +147,16 @@ public class Menu extends javax.swing.JPanel {
                 .addComponent(sp, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-     @Override
+         @Override
     protected void paintComponent(Graphics grphcs) {
         Graphics2D g2 = (Graphics2D) grphcs;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        GradientPaint gra = new GradientPaint(0, 0, new Color(33, 105, 249), getWidth(), 0, new Color(93, 58, 196));
+        GradientPaint gra = new GradientPaint(0, 0, new Color(37,157,211), getWidth(), 0, new Color(62,221,218)); ///set color menu item
         g2.setPaint(gra);
         g2.fillRect(0, 0, getWidth(), getHeight());
         super.paintComponent(grphcs);
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel panel;
     private swing.component.Profile profile2;
