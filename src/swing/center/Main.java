@@ -15,6 +15,7 @@ import swing.component.MenuItem;
 import swing.component.PopupMenu;
 import swing.form.Form_Home;
 import swing.form.Form_LapHoaDon;
+import swing.form.Form_ThongKeDoanhThu;
 import swing.form.Form_XemHoaDon;
 import swing.form.MainForm;
 import swing.icon.GoogleMaterialDesignIcons;
@@ -22,18 +23,18 @@ import swing.icon.IconFontSwing;
 import swing.login.Login;
 
 public class Main extends javax.swing.JFrame {
-
+    
     private MigLayout layout;
     private Menu menu;
     private Header header;
     private MainForm main;
     private Animator animator;
-
+    
     public Main() {
         initComponents();
         init();
     }
-
+    
     private void init() {
         layout = new MigLayout("fill", "0[]0[100%, fill]0", "0[fill, top]0");
         bg.setLayout(layout);
@@ -50,7 +51,7 @@ public class Main extends javax.swing.JFrame {
                         login.setVisible(true);
                         Main.this.dispose();
                     }
-
+                    
                 }
                 if (menuIndex == 1) {
                     if (subMenuIndex == 0) {
@@ -58,6 +59,11 @@ public class Main extends javax.swing.JFrame {
                     }
                     if (subMenuIndex == 1) {
                         main.showForm(new Form_XemHoaDon());
+                    }
+                }
+                if (menuIndex == 5) {
+                    if (subMenuIndex == 2) {
+                        main.showForm(new Form_ThongKeDoanhThu());
                     }
                 }
             }
@@ -93,13 +99,13 @@ public class Main extends javax.swing.JFrame {
                 layout.setComponentConstraints(menu, "w " + width + "!, spany2");
                 menu.revalidate();
             }
-
+            
             @Override
             public void end() {
                 menu.setShowMenu(!menu.isShowMenu());
                 menu.setEnableMenu(true);
             }
-
+            
         };
         animator = new Animator(500, target);
         animator.setResolution(0);
@@ -123,7 +129,7 @@ public class Main extends javax.swing.JFrame {
 //          Start with this form
         main.showForm(new Form_Home());
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
