@@ -3,20 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/D:/HK2-2023-2024/PTUD/PTUD_V2T/src/swing/form/Form_NhanVien.java</file>
-            <file>file:/D:/HK2-2023-2024/PTUD/PTUD_V2T/src/swing/form/Form_LapHoaDon.java</file>
-            <file>file:/D:/HK2-2023-2024/PTUD/PTUD_V2T/src/model/Thuoc.java</file>
-            <file>file:/D:/HK2-2023-2024/PTUD/PTUD_V2T/src/swing/center/Main.java</file>
-            <file>file:/D:/HK2-2023-2024/PTUD/PTUD_V2T/src/swing/form/Form_XemThongTinThuoc.java</file>
-            <file>file:/D:/HK2-2023-2024/PTUD/PTUD_V2T/src/swing/form/Form_QuanLyThuoc.java</file>
-=======
+            <file>file:/D:/V2T_PTUD/src/swing/login/Login.java</file>
             <file>file:/D:/V2T_PTUD/src/swing/table/ModelItemSell.java</file>
+            <file>file:/D:/V2T_PTUD/src/connetDataBase/JDBCuntil.java</file>
             <file>file:/D:/V2T_PTUD/src/swing/table/TestTable.java</file>
             <file>file:/D:/V2T_PTUD/src/swing/center/Main.java</file>
             <file>file:/D:/V2T_PTUD/src/swing/table/QtyCellEditor.java</file>
             <file>file:/D:/V2T_PTUD/src/swing/form/Form_LapHoaDon.java</file>
->>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
         </group>
     </open-files>
 </project-private>
