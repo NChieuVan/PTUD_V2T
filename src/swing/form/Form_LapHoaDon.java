@@ -69,7 +69,7 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         txtNV = new swing.jtext.MyTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new swing.table.Table();
-        myButton1 = new swing.jtext.MyButton();
+        btnTimThuoc = new swing.jtext.MyButton();
         btnXoa = new swing.jtext.MyButton();
         panelBoder1 = new swing.form.PanelBoder();
         jLabel6 = new javax.swing.JLabel();
@@ -152,6 +152,7 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
             table.getColumnModel().getColumn(2).setPreferredWidth(100);
         }
 
+<<<<<<< HEAD
         myButton1.setBackground(new java.awt.Color(0, 255, 255));
         myButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
         myButton1.setText("Tìm thuốc");
@@ -167,8 +168,14 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         myButton2.addActionListener(new java.awt.event.ActionListener() {
 =======
 >>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
+=======
+        btnTimThuoc.setBackground(new java.awt.Color(0, 255, 255));
+        btnTimThuoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
+        btnTimThuoc.setText("Tìm thuốc");
+        btnTimThuoc.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton1ActionPerformed(evt);
+                btnTimThuocActionPerformed(evt);
             }
         });
 
@@ -374,7 +381,7 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                                     .addComponent(jLabel12)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(209, 209, 209)
-                                .addComponent(myButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnTimThuoc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(55, 55, 55)
                                 .addComponent(btnXoa1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(37, 37, 37)
@@ -435,10 +442,11 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                 .addGap(24, 24, 24)
 =======
                 .addGap(18, 18, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnXoa, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnXoa1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnTimThuoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnXoa, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnXoa1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
 >>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -508,11 +516,11 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSdtActionPerformed
 
-    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+    private void btnTimThuocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimThuocActionPerformed
         Form_TìmThuoc timThuoc = new Form_TìmThuoc(null, true);
         timThuoc.setVisible(true);
         
-    }//GEN-LAST:event_myButton1ActionPerformed
+    }//GEN-LAST:event_btnTimThuocActionPerformed
 
     private void btnXoa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa1ActionPerformed
             Form_TimKhachHang kh = new Form_TimKhachHang(null, true);
@@ -526,6 +534,7 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private swing.jtext.MyButton btnInHoaDon;
+    private swing.jtext.MyButton btnTimThuoc;
     private swing.jtext.MyButton btnXoa;
     private swing.jtext.MyButton btnXoa1;
     private javax.swing.JLabel jLabel1;
@@ -542,7 +551,6 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private swing.jtext.MyButton myButton1;
     private swing.jtext.MyButton myButton4;
     private swing.form.PanelBoder panelBoder1;
     private swing.table.Table table;

@@ -64,7 +64,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="209" max="-2" attributes="0"/>
-                              <Component id="myButton1" max="32767" attributes="0"/>
+                              <Component id="btnTimThuoc" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                               <Component id="btnXoa1" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -143,10 +143,19 @@
                   </Group>
 =======
               <EmptySpace type="separate" max="32767" attributes="0"/>
+<<<<<<< HEAD
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="myButton1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="btnXoa" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="btnXoa1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+>>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
+=======
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnTimThuoc" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnXoa" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="btnXoa1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  </Group>
 >>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
               </Group>
               <EmptySpace pref="19" max="32767" attributes="0"/>
@@ -292,7 +301,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="swing.jtext.MyButton" name="myButton1">
+    <Component class="swing.jtext.MyButton" name="btnTimThuoc">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="0" type="rgb"/>
@@ -317,7 +326,7 @@
 =======
 >>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="myButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTimThuocActionPerformed"/>
       </Events>
     </Component>
     <Component class="swing.jtext.MyButton" name="btnXoa">
