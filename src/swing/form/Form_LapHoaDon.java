@@ -152,28 +152,28 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
             table.getColumnModel().getColumn(2).setPreferredWidth(100);
         }
 
-<<<<<<< HEAD
-        myButton1.setBackground(new java.awt.Color(0, 255, 255));
-        myButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
-        myButton1.setText("Tìm thuốc");
-        myButton1.addActionListener(new java.awt.event.ActionListener() {
-<<<<<<< HEAD
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton1ActionPerformed(evt);
-            }
-        });
+// <<<<<<< HEAD
+//         myButton1.setBackground(new java.awt.Color(0, 255, 255));
+//         myButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
+//         myButton1.setText("Tìm thuốc");
+//         myButton1.addActionListener(new java.awt.event.ActionListener() {
+// <<<<<<< HEAD
+//             public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                 myButton1ActionPerformed(evt);
+//             }
+//         });
 
-        myButton2.setBackground(new java.awt.Color(0, 255, 153));
-        myButton2.setText("Thêm ");
-        myButton2.addActionListener(new java.awt.event.ActionListener() {
-=======
->>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
-=======
+//         myButton2.setBackground(new java.awt.Color(0, 255, 153));
+//         myButton2.setText("Thêm ");
+//         myButton2.addActionListener(new java.awt.event.ActionListener() {
+// =======
+//>>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
+//=======
         btnTimThuoc.setBackground(new java.awt.Color(0, 255, 255));
         btnTimThuoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
         btnTimThuoc.setText("Tìm thuốc");
         btnTimThuoc.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
+// >>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTimThuocActionPerformed(evt);
             }
