@@ -67,13 +67,22 @@ public class QtyCellEditor extends DefaultCellEditor {
         return input.getValue();
     }
 
+/**
+ * update giá trị theo số lượng đơn giá
+ * 
+ * 
+ */
     private void inputChange() {
         int qty = Integer.parseInt(input.getValue().toString());
         if (qty != item.getQty()) {
             DecimalFormat df = new DecimalFormat("#,##0.##");
             item.setQty(qty);
-            item.setTotal(item.getPrice() * qty);
-            table.setValueAt("$ " + df.format(item.getTotal()), row, 5);
+            
+            item.setGiaGiam(item.getPrice()* qty* 0.2);
+            item.setTotal(item.getPrice() * qty - item.getGiaGiam());
+            table.setValueAt(df.format(item.getGiaGiam()), row, 5);
+            table.setValueAt(df.format(item.getTotal()), row, 6);
+       
             event.inputChanged();
         }
     }
