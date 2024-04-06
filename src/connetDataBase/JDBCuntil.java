@@ -6,9 +6,11 @@ import java.sql.SQLException;
 
 public class JDBCuntil {
 	public static JDBCuntil instance = new JDBCuntil();
+	public static Connection con = null;
 	public static JDBCuntil getInstance() {
 		return instance;
 	}
+	
 	public static Connection getConnetion() {
 		Connection c = null;
 		try {
@@ -23,5 +25,16 @@ public class JDBCuntil {
 		}
 		return c;
 }
+	
+	public static void disconnect() {
+		if (con != null) {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
 
 }

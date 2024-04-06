@@ -59,7 +59,7 @@ public class Menu extends javax.swing.JPanel {
         addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/5.png")), "Khách hàng", "Thông tin khách hàng"));
         addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/6.png")), "Thống kê", "Lập hóa đơn theo nhân viên", "Theo tình trạng thuốc", "Doanh thu"));
         addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/7.png")), "Phiếu nhập"));
-        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/8.png")), "Phiếu xuất"));
+//        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/8.png")), "Phiếu xuất"));
 //        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/9.png")), "Calendar", "Menu 001", "Menu 002", "Menu 003"));
 //        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/10.png")), "Chat App", "Menu 001", "Menu 002", "Menu 003"));
 //        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/icon/11.png")), "Contace", "Menu 001", "Menu 002", "Menu 003"));

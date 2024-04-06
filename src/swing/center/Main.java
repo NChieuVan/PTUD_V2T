@@ -14,9 +14,13 @@ import swing.component.Menu;
 import swing.component.MenuItem;
 import swing.component.PopupMenu;
 import swing.form.Form_Home;
+import swing.form.Form_KhachHang;
 import swing.form.Form_LapHoaDon;
+
+import swing.form.Form_QuanLyThuoc;
 import swing.form.Form_ThongKeDoanhThu;
 import swing.form.Form_XemHoaDon;
+import swing.form.Form_XemThongTinThuoc;
 import swing.form.MainForm;
 import swing.icon.GoogleMaterialDesignIcons;
 import swing.icon.IconFontSwing;
@@ -64,6 +68,23 @@ public class Main extends javax.swing.JFrame {
                 if (menuIndex == 5) {
                     if (subMenuIndex == 2) {
                         main.showForm(new Form_ThongKeDoanhThu());
+                    }
+                }
+                
+                if (menuIndex == 2) {
+                    if (subMenuIndex == 1) {
+                        main.showForm(new Form_QuanLyThuoc());
+                    }
+                    if (subMenuIndex == 0) {
+                        main.showForm(new Form_XemThongTinThuoc());
+                    }
+                        
+                }
+                
+                
+                if (menuIndex == 4) {
+                    if (subMenuIndex == 0) {
+                        main.showForm(new Form_KhachHang());
                     }
                 }
             }
