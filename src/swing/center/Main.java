@@ -31,7 +31,7 @@ public class Main extends javax.swing.JFrame {
     private MigLayout layout;
     private Menu menu;
     private Header header;
-    private MainForm main;
+    public MainForm main;
     private Animator animator;
     
     public Main() {

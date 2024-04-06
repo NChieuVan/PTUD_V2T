@@ -38,6 +38,7 @@ import swing.table.QtyCellEditor;
 public class Form_LapHoaDon extends javax.swing.JPanel  {
     
     private DateChooser chdate = new DateChooser();
+    private DefaultTableModel model;
     
     public Form_LapHoaDon() {
         initComponents();
@@ -68,32 +69,27 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         txtNV = new swing.jtext.MyTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new swing.table.Table();
-        jLabel5 = new javax.swing.JLabel();
         myButton1 = new swing.jtext.MyButton();
-        myButton2 = new swing.jtext.MyButton();
-        myButton3 = new swing.jtext.MyButton();
+        btnXoa = new swing.jtext.MyButton();
         panelBoder1 = new swing.form.PanelBoder();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         txtTotal = new swing.jtext.MyTextField();
         jLabel9 = new javax.swing.JLabel();
-        txtKM = new swing.jtext.MyTextField();
+        txtTongTienKhuyenMai = new swing.jtext.MyTextField();
         jLabel10 = new javax.swing.JLabel();
         txtThanhTienCuoi = new swing.jtext.MyTextField();
         myButton4 = new swing.jtext.MyButton();
-        myButton6 = new swing.jtext.MyButton();
-        myButton8 = new swing.jtext.MyButton();
+        btnInHoaDon = new swing.jtext.MyButton();
         jLabel11 = new javax.swing.JLabel();
         txtTenKH = new swing.jtext.MyTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         txtCccd = new swing.jtext.MyTextField();
         txtSdt = new swing.jtext.MyTextField();
-        txtNV1 = new swing.jtext.MyTextField();
-        jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        btnXoa1 = new swing.jtext.MyButton();
 
         setBackground(new java.awt.Color(255, 253, 250));
 
@@ -136,11 +132,11 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
 
             },
             new String [] {
-                "Data", "STT", "Tên thuốc", "Số lượng", "Đơn giá", "Thành tiền"
+                "Data", "STT", "Tên thuốc", "Số lượng", "Đơn giá", "Giá giảm", "Thành tiền"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, false, false, true, true, false
+                true, false, false, true, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -156,13 +152,11 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
             table.getColumnModel().getColumn(2).setPreferredWidth(100);
         }
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabel5.setText("Tìm thuốc theo:");
-
         myButton1.setBackground(new java.awt.Color(0, 255, 255));
         myButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
         myButton1.setText("Tìm thuốc");
         myButton1.addActionListener(new java.awt.event.ActionListener() {
+<<<<<<< HEAD
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 myButton1ActionPerformed(evt);
             }
@@ -171,16 +165,19 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         myButton2.setBackground(new java.awt.Color(0, 255, 153));
         myButton2.setText("Thêm ");
         myButton2.addActionListener(new java.awt.event.ActionListener() {
+=======
+>>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton2ActionPerformed(evt);
+                myButton1ActionPerformed(evt);
             }
         });
 
-        myButton3.setBackground(new java.awt.Color(255, 153, 0));
-        myButton3.setText("Xóa");
-        myButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnXoa.setBackground(new java.awt.Color(51, 255, 255));
+        btnXoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/delete.png"))); // NOI18N
+        btnXoa.setText("Xóa thuốc");
+        btnXoa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton3ActionPerformed(evt);
+                btnXoaActionPerformed(evt);
             }
         });
 
@@ -204,10 +201,10 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jLabel9.setText("Giảm khuyến mãi:");
 
-        txtKM.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        txtKM.addActionListener(new java.awt.event.ActionListener() {
+        txtTongTienKhuyenMai.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        txtTongTienKhuyenMai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKMActionPerformed(evt);
+                txtTongTienKhuyenMaiActionPerformed(evt);
             }
         });
 
@@ -228,17 +225,10 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
             }
         });
 
-        myButton6.setText("Thoát");
-        myButton6.addActionListener(new java.awt.event.ActionListener() {
+        btnInHoaDon.setText("In Hóa Đơn");
+        btnInHoaDon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton6ActionPerformed(evt);
-            }
-        });
-
-        myButton8.setText("In Hóa Đơn");
-        myButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                myButton8ActionPerformed(evt);
+                btnInHoaDonActionPerformed(evt);
             }
         });
 
@@ -264,16 +254,14 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelBoder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtTongTienKhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtThanhTienCuoi, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelBoder1Layout.createSequentialGroup()
                                 .addComponent(myButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(126, 126, 126)
-                                .addComponent(myButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(myButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtKM, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtThanhTienCuoi, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(btnInHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
         panelBoder1Layout.setVerticalGroup(
             panelBoder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,7 +275,7 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelBoder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtKM, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTongTienKhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelBoder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -300,9 +288,8 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                         .addGap(21, 21, 21)
                         .addGroup(panelBoder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(myButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(myButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(myButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                            .addComponent(btnInHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
@@ -314,8 +301,6 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                 txtTenKHActionPerformed(evt);
             }
         });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mã thuốc", "Tên thuốc", " " }));
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jLabel12.setText("CCCD:");
@@ -337,19 +322,18 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
             }
         });
 
-        txtNV1.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        txtNV1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNV1ActionPerformed(evt);
-            }
-        });
-
-        jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabel14.setText("Thuốc:");
-
         jLabel15.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 51, 0));
         jLabel15.setText("Bảng danh sách thuốc");
+
+        btnXoa1.setBackground(new java.awt.Color(51, 255, 255));
+        btnXoa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/delete.png"))); // NOI18N
+        btnXoa1.setText("Tìm Khách hàng");
+        btnXoa1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoa1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -362,7 +346,7 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                     .addComponent(panelBoder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(351, 351, 351)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
                         .addGap(405, 405, 405))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -373,25 +357,8 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                                 .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtNV, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                                    .addComponent(txtMaHD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtMaHD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel14)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtNV1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)
-                                .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(myButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(15, 15, 15)
-                                .addComponent(myButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -404,11 +371,18 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel12))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtCccd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtSdt, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jLabel12)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(209, 209, 209)
+                                .addComponent(myButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(55, 55, 55)
+                                .addComponent(btnXoa1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(37, 37, 37)
+                                .addComponent(btnXoa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtCccd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtSdt, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(16, 16, 16))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
@@ -447,6 +421,7 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtSdt, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel13))))
+<<<<<<< HEAD
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -458,6 +433,14 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtNV1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(24, 24, 24)
+=======
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(myButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnXoa, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnXoa1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+>>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -479,21 +462,17 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNVActionPerformed
 
-    private void myButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton2ActionPerformed
+    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_myButton2ActionPerformed
-
-    private void myButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_myButton3ActionPerformed
+    }//GEN-LAST:event_btnXoaActionPerformed
 
     private void txtTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTotalActionPerformed
 
-    private void txtKMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKMActionPerformed
+    private void txtTongTienKhuyenMaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTongTienKhuyenMaiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtKMActionPerformed
+    }//GEN-LAST:event_txtTongTienKhuyenMaiActionPerformed
 
     private void txtThanhTienCuoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtThanhTienCuoiActionPerformed
         // TODO add your handling code here:
@@ -503,15 +482,11 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         // TODO add your handling code here:
     }//GEN-LAST:event_myButton4ActionPerformed
 
-    private void myButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_myButton6ActionPerformed
-
     private void txtTenKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTenKHActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTenKHActionPerformed
 
-    private void myButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton8ActionPerformed
+    private void btnInHoaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInHoaDonActionPerformed
         try {
             List<FieldReportPayment> fields = new ArrayList<>();
             for (int i = 0; i < table.getRowCount(); i++) {
@@ -523,7 +498,7 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_myButton8ActionPerformed
+    }//GEN-LAST:event_btnInHoaDonActionPerformed
 
     private void txtCccdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCccdActionPerformed
         // TODO add your handling code here:
@@ -533,9 +508,16 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSdtActionPerformed
 
-    private void txtNV1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNV1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNV1ActionPerformed
+    private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
+        Form_TìmThuoc timThuoc = new Form_TìmThuoc(null, true);
+        timThuoc.setVisible(true);
+        
+    }//GEN-LAST:event_myButton1ActionPerformed
+
+    private void btnXoa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoa1ActionPerformed
+            Form_TimKhachHang kh = new Form_TimKhachHang(null, true);
+            kh.setVisible(true);
+    }//GEN-LAST:event_btnXoa1ActionPerformed
 
     private void myButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myButton1ActionPerformed
         // TODO add your handling code here:
@@ -543,43 +525,43 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private swing.jtext.MyButton btnInHoaDon;
+    private swing.jtext.MyButton btnXoa;
+    private swing.jtext.MyButton btnXoa1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private swing.jtext.MyButton myButton1;
-    private swing.jtext.MyButton myButton2;
-    private swing.jtext.MyButton myButton3;
     private swing.jtext.MyButton myButton4;
-    private swing.jtext.MyButton myButton6;
-    private swing.jtext.MyButton myButton8;
     private swing.form.PanelBoder panelBoder1;
     private swing.table.Table table;
     private swing.jtext.MyTextField txtCccd;
-    private swing.jtext.MyTextField txtKM;
     private swing.jtext.MyTextField txtMaHD;
     private swing.jtext.MyTextField txtNLHD;
     private swing.jtext.MyTextField txtNV;
-    private swing.jtext.MyTextField txtNV1;
     private swing.jtext.MyTextField txtSdt;
     private swing.jtext.MyTextField txtTenKH;
     private swing.jtext.MyTextField txtThanhTienCuoi;
+    private swing.jtext.MyTextField txtTongTienKhuyenMai;
     private swing.jtext.MyTextField txtTotal;
     // End of variables declaration//GEN-END:variables
-
+    
+    /**
+     * chỉnh số lượng sản phẩm,
+     * tính giá giảm ,
+     * tính tổng tiền
+     */
     private void showData() {
         try {
             ReportManager.getInstance().compileReport();
@@ -591,9 +573,12 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
             @Override
             public void inputChanged() {
                 sumAmount();
+                sumKhuyenMai();
             }
         }));
-        
+        /**
+         * chỉnh cho giá trị nhập chỉnh sửa ở giữa
+         */
         table.getColumnModel().getColumn(3).setCellRenderer(new DefaultTableCellRenderer() {
             @Override
             public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
@@ -603,14 +588,27 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
             }
         });
         
-        DefaultTableModel model = (DefaultTableModel) table.getModel();
-        model.addRow(new ModelItemSell(1, "Coca", 2, 0.5, 2).toTableRow(table.getRowCount() + 1));
-        model.addRow(new ModelItemSell(8, "Fanta", 2, 0.5, 2).toTableRow(table.getRowCount() + 1));
-        model.addRow(new ModelItemSell(10, "Beer", 1, 0.5, 0.5).toTableRow(table.getRowCount() + 1));
-        model.addRow(new ModelItemSell(11, "Orange", 2, 0.5, 2).toTableRow(table.getRowCount() + 1));
-        model.addRow(new ModelItemSell(15, "Apple", 2, 0.5, 2).toTableRow(table.getRowCount() + 1));
+        /**
+         * add vào table
+         * List <Qrcode,"Name","số lượng = 1" ,đơn giá", "giá đã giảm","Tổng tiền" >
+         * @ giá đã giảm = số lượng *đơn giá * % giảm
+         * @ tổng tiền = số lượng * đơn giá - giá đã giảm
+         */
+        model = (DefaultTableModel) table.getModel();
+        model.addRow(new ModelItemSell(1, "Coca", 2, 0.5,0.0, 2).toTableRow(table.getRowCount() + 1));
+        model.addRow(new ModelItemSell(8, "Fanta", 2, 0.5,0.0, 2).toTableRow(table.getRowCount() + 1));
+        model.addRow(new ModelItemSell(10, "Beer", 1, 0.5,0.0,0.5).toTableRow(table.getRowCount() + 1));
+        model.addRow(new ModelItemSell(11, "Orange", 2, 0.5,0.0, 2).toTableRow(table.getRowCount() + 1));
+        model.addRow(new ModelItemSell(15, "Apple", 2, 0.5,0.0, 2).toTableRow(table.getRowCount() + 1));
         sumAmount();
+        sumKhuyenMai();
     }
+    
+    
+    /**
+     * hàm tính tổng tiền đã trừ khuyến mãi
+     * lấy cột thành tiền cộng dồn
+     */
     private void sumAmount(){
         double total = 0;
         for(int i=0;i<table.getRowCount();i++){
@@ -621,6 +619,28 @@ public class Form_LapHoaDon extends javax.swing.JPanel  {
         txtTotal.setText("$ "+ decimalFormat.format(total));
     }
     
+    private void sumKhuyenMai(){
+        double total = 0;
+        double tmp = 0.0;
+//        int index = table.getColumnCount()-2;
+         
+        for(int i=0;i<table.getRowCount();i++){
+           
+           tmp = Double.parseDouble(table.getValueAt(i, 5).toString());
+            total += tmp;
+        }
+        DecimalFormat decimalFormat = new DecimalFormat("#,##0.00");
+        txtTongTienKhuyenMai.setText(decimalFormat.format(total));
+    }
+    
+    
+    
+    /**
+     * Tạo QRcode cho chi tiết hóa đơn
+     * @return
+     * @throws WriterException
+     * @throws IOException 
+     */
     private InputStream generateQrcode() throws WriterException, IOException {
         NumberFormat nf = new DecimalFormat("0000000");
         Random ran = new Random();

@@ -56,12 +56,16 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="D:/HK2-2023-2024/PTUD/PTUD_V2T/lib/groovy-all-2.4.16.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/HK2-2023-2024/PTUD/PTUD_V2T/lib/jasper-compiler-jdt-5.5.23.jar">
+=======
+	<classpathentry kind="lib" path="D:/V2T_PTUD/lib/jasper-compiler-jdt-5.5.23.jar">
+>>>>>>> branch 'master' of https://github.com/NChieuVan/PTUD_V2T.git
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
@@ -107,6 +111,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/HK2-2023-2024/PTUD/PTUD_V2T/lib/TimingFramework-0.55.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/V2T_PTUD/lib/groovy-all-2.4.16.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
